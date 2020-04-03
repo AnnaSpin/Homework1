@@ -82,6 +82,8 @@ mean=[0.0, 0.5]
 cov= [[2.0,1.0],[1.0,2.0]]
 
 x, y = np.random.multivariate_normal(mean, cov, 100).T
+
+plt.figure()
 plt.plot(x, y, 'o')
 plt.axis('equal')
 plt.show()
