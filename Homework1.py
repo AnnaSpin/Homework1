@@ -9,6 +9,9 @@ Created on Mon Feb 24 10:47:47 2020
 https://stackoverflow.com/questions/28342968/how-to-plot-a-2d-gaussian-with-different-sigma
 
 https://www.youtube.com/watch?v=eho8xH3E6mE 
+
+https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.multivariate_normal.html
+https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.random.multivariate_normal.html
 """
 
 
@@ -109,6 +112,11 @@ cp = plt.contour(xx, yy, Z)
 plt.clabel(cp, inline=True, 
           fontsize=10)
 plt.show()
+
+plt.figure()
+pos[:, :, 0] =xx; pos[:, :, 1] = 2
+plt.plot(xx, rv.pdf(pos), 'blue')
+plt.axvline(x=0.75, color='r--')
 
 '''
 
